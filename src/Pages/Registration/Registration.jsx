@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Registration = () => {
@@ -8,13 +9,18 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    console.log(email, password);
+    setEmail(email);
+    setPassword(password);
+    createUserWithEmailAndPassword(email, password);
+  };
   if (loading) {
     return (
       <div
@@ -25,14 +31,11 @@ const Registration = () => {
       </div>
     );
   }
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    console.log(email, password);
-    setEmail(email);
-    setPassword(password);
-    createUserWithEmailAndPassword(email, password);
+  if (user) {
+    navigate(from, { replace: true });
+  }
+  const toggleToLogin = () => {
+    navigate("/login");
   };
   return (
     <div>
@@ -68,6 +71,17 @@ const Registration = () => {
             Login
           </Button>
         </Form>
+        <p className="text-center pt-3">
+          Already have an account?{" "}
+          <Button
+            onClick={toggleToLogin}
+            className="text-success"
+            variant="transparent"
+          >
+            Please Login
+          </Button>
+          <p className="text-danger text-center">{error?.message}</p>
+        </p>
       </div>
     </div>
   );
