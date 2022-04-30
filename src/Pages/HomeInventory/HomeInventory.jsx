@@ -19,7 +19,9 @@ const HomeInventory = ({ car }) => {
           </small>
         </Card.Body>
         <Card.Footer>
-          <button className="btn btn-primary d-block w-100">Update</button>
+          <button className="btn btn-outline-success d-block w-100">
+            Update
+          </button>
         </Card.Footer>
       </Card>
     </div>

@@ -5,8 +5,8 @@
       "price": 36400,
       "img": "https://i.ibb.co/MMz7Sz9/car01.png",
       "des":"More than a commanding view of the road ahead, the GLA offers a rewarding view of what's next. It not only puts more sport in compact SUVs, it puts more you.",
-      "supplier":"Mercedes"
-
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 2,
