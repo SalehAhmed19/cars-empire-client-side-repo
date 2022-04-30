@@ -6,7 +6,7 @@ const WelcomeGrettings = () => {
   return (
     <div className="w-75 mx-auto my-5 border px-3 py-1 rounded-3 bg-light">
       <div className="row">
-        <div className="col-md-6 col-12 d-flex justify-content-center align-items-center">
+        <div className="col-md-6 col-12 d-flex justify-content-center align-items-center p-5">
           <img className="img" src={img} alt="" />
         </div>
         <div className="col-md-6 col-12 d-flex flex-column justify-content-center bg-warning p-3">
