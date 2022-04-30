@@ -4,14 +4,12 @@ import { Card } from "react-bootstrap";
 const Cars = ({ car }) => {
   const { name, price, des, supplier, img, quantity } = car;
   return (
-    <div className="col-md-4 col-12 my-3">
+    <div className="col-12 my-3">
       <Card>
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title className="fw-bold">{name}</Card.Title>
-          <Card.Text className="text-secondary">
-            {des.slice(0, 100) + "..."}
-          </Card.Text>
+          <Card.Text className="text-secondary">{des}</Card.Text>
           <Card.Text className="text-secondary">Quantity: {quantity}</Card.Text>
           <Card.Text className="text-secondary">Supplier: {supplier}</Card.Text>
           <small className="text-muted">
