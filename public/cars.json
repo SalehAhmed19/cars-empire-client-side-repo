@@ -4,7 +4,8 @@
       "name": "GLA SUV",
       "price": 36400,
       "img": "https://i.ibb.co/MMz7Sz9/car01.png",
-      "des":"More than a commanding view of the road ahead, the GLA offers a rewarding view of what's next. It not only puts more sport in compact SUVs, it puts more you."
+      "des":"More than a commanding view of the road ahead, the GLA offers a rewarding view of what's next. It not only puts more sport in compact SUVs, it puts more you.",
+      "supplier":"Mercedes"
 
     },
     {
@@ -12,28 +13,36 @@
       "name": "GLV SUV",
       "price": 38600,
       "img": "https://i.ibb.co/xHkVKb0/car02.png",
-      "des":"Has any SUV ever fit so much into such a compact package? Seating for up to seven. Rugged in all the right places. Looks to match. So smart it can carry on a conversation, and carry out your wishes. And all priced to please."
+      "des":"Has any SUV ever fit so much into such a compact package? Seating for up to seven. Rugged in all the right places. Looks to match. So smart it can carry on a conversation, and carry out your wishes. And all priced to please.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 3,
       "name": "GLC SUV",
       "price": 43850,
       "img": "https://i.ibb.co/6Jxtt3q/car03.png",
-      "des":"The GLC aims to keep raising benchmarks for SUVs: Its athletic, aerodynamic body envelops an elegantly high-tech cabin. LED lighting and polished details express the brilliance within."
+      "des":"The GLC aims to keep raising benchmarks for SUVs: Its athletic, aerodynamic body envelops an elegantly high-tech cabin. LED lighting and polished details express the brilliance within.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 4,
       "name": "GLC COUPE",
       "price": 52500,
       "img": "https://i.ibb.co/f2tQmKS/car04.png",
-      "des":"You don't count doors to define a Mercedes-Benz coupe. Character is what counts. Agile and sleek, the GLC Coupe puts the 'stance' in substance. LED headlamps and three-dimensional LED taillights add to its shine."
+      "des":"You don't count doors to define a Mercedes-Benz coupe. Character is what counts. Agile and sleek, the GLC Coupe puts the 'stance' in substance. LED headlamps and three-dimensional LED taillights add to its shine.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 5,
       "name": "GLE SUV",
       "price": 56150,
       "img": "https://i.ibb.co/KmWF43F/car05.png",
-      "des":"The luxury SUV that started the segment continues to lead the way. Roomy and refined, it's also agile and aerodynamic. And from LED headlamps to a bold yet elegant cabin, it wraps first-in-class tech in finely tailored style."
+      "des":"The luxury SUV that started the segment continues to lead the way. Roomy and refined, it's also agile and aerodynamic. And from LED headlamps to a bold yet elegant cabin, it wraps first-in-class tech in finely tailored style.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 6,
@@ -47,111 +56,143 @@
       "name": "GLS SUV",
       "price": 77850,
       "img": "https://i.ibb.co/Kmd1rYb/car07.png",
-      "des":"In an ever-more-crowded field of luxury SUVs, treat yourself to some room. The sleek, spacious GLS wraps class-leading innovations in bold yet elegant style."
+      "des":"In an ever-more-crowded field of luxury SUVs, treat yourself to some room. The sleek, spacious GLS wraps class-leading innovations in bold yet elegant style.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 8,
       "name": "Mercedes-Maybach GLS SUV",
       "price": 160500,
       "img": "https://i.ibb.co/z7L0B6n/car08.png",
-      "des":"Glimmering grille blades and a standup Star tempt the eye. Exquisite materials greet your senses. Innovative luxuries meet them. Comfort is its mission, the product of confidence with a commanding view."
+      "des":"Glimmering grille blades and a standup Star tempt the eye. Exquisite materials greet your senses. Innovative luxuries meet them. Comfort is its mission, the product of confidence with a commanding view.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 9,
       "name": "G-Class SUV",
       "price": 131750,
       "img": "https://i.ibb.co/59NCrrb/car09.png",
-      "des":"What makes an icon iconic? When it follows only its own moral compass. When its design is shaped by its genuine capability. When its sense of adventure is unwavering. And when it's forever timeless, freshly modern, and ready for what's next."
+      "des":"What makes an icon iconic? When it follows only its own moral compass. When its design is shaped by its genuine capability. When its sense of adventure is unwavering. And when it's forever timeless, freshly modern, and ready for what's next.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 10,
       "name": "A-Class Sedan",
       "price": 33950,
       "img": "https://i.ibb.co/r3MDKcB/car10.png",
-      "des":"A is for attention-getting. Clean lines, LED lighting and an aggressive stance aim for admiring eyes. An ultramodern, premium cabin can captivate you for years to come."
+      "des":"A is for attention-getting. Clean lines, LED lighting and an aggressive stance aim for admiring eyes. An ultramodern, premium cabin can captivate you for years to come.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 11,
       "name": "C-Class Sedan",
       "price": 46460,
       "img": "https://i.ibb.co/fY3k27L/car11.png",
-      "des":"The classic proportions and tensed muscle tone of a sport sedan envelop a spacious digital cockpit. A perennial favorite leaps into the future, to entice you, engage, you and enthrall you like never before."
+      "des":"The classic proportions and tensed muscle tone of a sport sedan envelop a spacious digital cockpit. A perennial favorite leaps into the future, to entice you, engage, you and enthrall you like never before.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 12,
       "name": "E-Class Sedan",
       "price": 54950,
       "img": "https://i.ibb.co/HrDc1J7/car12.png",
-      "des":"The E-Class body always reflects its soul. So its many enhancements are wrapped in a timelessly modern design. A sporty grille and LED headlamps lead the way, while the shapely LED taillamps leave a lasting impression."
+      "des":"The E-Class body always reflects its soul. So its many enhancements are wrapped in a timelessly modern design. A sporty grille and LED headlamps lead the way, while the shapely LED taillamps leave a lasting impression.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 13,
       "name": "EQS Sedan",
       "price": 102310,
       "img": "https://i.ibb.co/RpYbf7c/car13.png",
-      "des":"The advanced electric powertrain inspires a new era in style, but the EQS body is designed around you. Taut like an archer's bow, the shape optimizes cabin comfort and aerodynamic efficiency. Elegantly futuristic details captivate the eye, yet the wind barely notices the EQS sneaking through."
+      "des":"The advanced electric powertrain inspires a new era in style, but the EQS body is designed around you. Taut like an archer's bow, the shape optimizes cabin comfort and aerodynamic efficiency. Elegantly futuristic details captivate the eye, yet the wind barely notices the EQS sneaking through.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 14,
       "name": "S-Class Sedan",
       "price": 36400,
       "img": "https://i.ibb.co/JyZ1kbg/car14.png",
-      "des":"Signature details, majestic proportions and a windswept sportiness unite in a sedan that's undeniably modern yet unmistakably an S-Class. The gleaming Star stands proud above the iconic grille, a beacon of inspiration for all cars to follow."
+      "des":"Signature details, majestic proportions and a windswept sportiness unite in a sedan that's undeniably modern yet unmistakably an S-Class. The gleaming Star stands proud above the iconic grille, a beacon of inspiration for all cars to follow.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 15,
       "name": "Mercedes-Maybach S-Class",
       "price": 184900,
       "img": "https://i.ibb.co/y5rSwwr/car15.png",
-      "des":"Grille blades shimmer. Pillar emblems glow. Paintwork and chrome accentuate flowing lines and a confident stance. The cabin is the work of 16,000 needles in unison, and several pairs of expert hands."
+      "des":"Grille blades shimmer. Pillar emblems glow. Paintwork and chrome accentuate flowing lines and a confident stance. The cabin is the work of 16,000 needles in unison, and several pairs of expert hands.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 16,
       "name": "E-Class Wagon",
       "price": 68400,
       "img": "https://i.ibb.co/F4pJnXk/car16.png",
-      "des":"Quite possibly the most brainy wagon on earth, the E 450 All-Terrain Wagon is brawny, too. Rugged outside and underneath, it's 100% E-Class within: richly refined and ever-advancing."
+      "des":"Quite possibly the most brainy wagon on earth, the E 450 All-Terrain Wagon is brawny, too. Rugged outside and underneath, it's 100% E-Class within: richly refined and ever-advancing.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 17,
       "name": "CLA Coupe",
       "price": 38200,
       "img": "https://i.ibb.co/WVXjxqB/car17.png",
-      "des":"It's the ongoing advancement of a passionate original. Its four-door coupe style whispers seductively in your ear. Its industry-advancing voice assistant lets you talk back. And from performance to driver assists, it responds even more eloquently."
+      "des":"It's the ongoing advancement of a passionate original. Its four-door coupe style whispers seductively in your ear. Its industry-advancing voice assistant lets you talk back. And from performance to driver assists, it responds even more eloquently.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 18,
       "name": "C-Class Coupe",
       "price": 47850,
       "img": "https://i.ibb.co/FwsSxnY/car18.png",
-      "des":"Its shape is sharpened. Its stance, assertive. Its details, polished. The C-Class Coupe displays its state-of-the-art innovations and turbocharged power in a muscular frame with the power to seduce."
+      "des":"Its shape is sharpened. Its stance, assertive. Its details, polished. The C-Class Coupe displays its state-of-the-art innovations and turbocharged power in a muscular frame with the power to seduce.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 19,
       "name": "E-Class Coupe",
       "price": 66100,
       "img": "https://i.ibb.co/PwJ6zkB/car19.png",
-      "des":"The E-Class Coupe is a tradition that never stops leaping ahead. The art of driving is elevated in elegantly sporty style. While the state of the art is advanced by intuitive technology."
+      "des":"The E-Class Coupe is a tradition that never stops leaping ahead. The art of driving is elevated in elegantly sporty style. While the state of the art is advanced by intuitive technology.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 20,
       "name": "CLS Coupe",
       "price": 72950,
       "img": "https://i.ibb.co/XVTSQ3N/car20.png",
-      "des":"With its 'four-door coupe' shape, the first CLS sparked a sleek new era in car design. With fresh AMG styling, a new grille, 19-inch wheels and LED lighting all standard, the 2022 CLS is in better shape than ever."
+      "des":"With its 'four-door coupe' shape, the first CLS sparked a sleek new era in car design. With fresh AMG styling, a new grille, 19-inch wheels and LED lighting all standard, the 2022 CLS is in better shape than ever.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 21,
       "name": "Mercedes-AMG GT 4-door Coupe",
       "price": 92500,
       "img": "https://i.ibb.co/k9DQF6G/car21.png",
-      "des":"The long wheelbase enhances four-passenger legroom. The tailored power soft top allows infinite headroom. The E-Class Cabriolet wraps cutting-edge tech in impeccably tailored style."
+      "des":"The long wheelbase enhances four-passenger legroom. The tailored power soft top allows infinite headroom. The E-Class Cabriolet wraps cutting-edge tech in impeccably tailored style.",
+      "supplier":"Mercedes",
+      "quantity": 7
     },
     {
       "_id": 22,
       "name": "Mercedes-AMG GT",
       "price": 118600,
       "img": "https://i.ibb.co/PWLxnBy/car22.png",
-      "des":"Top up or down, the long-hood proportions express the purity of a roadster with a clarity of purpose. From the vertical-bar grille to an active rear spoiler, airflow under, over and into the body is managed with strategic brilliance. Every element contributes to performance, and conspires to seduce."
+      "des":"Top up or down, the long-hood proportions express the purity of a roadster with a clarity of purpose. From the vertical-bar grille to an active rear spoiler, airflow under, over and into the body is managed with strategic brilliance. Every element contributes to performance, and conspires to seduce.",
+      "supplier":"Mercedes",
+      "quantity": 7
     }
   ]
