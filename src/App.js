@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import FullInventory from "./Pages/FullInventory/FullInventory";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import Registration from "./Pages/Registration/Registration";
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/inventory" element={<FullInventory />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
       </Routes>
