@@ -19,9 +19,20 @@ const Cars = ({ car }) => {
           </small>
         </Card.Body>
         <Card.Footer className="p-0">
-          <button className="btn btn-outline-success rounded-0 d-block w-100">
-            Update
-          </button>
+          <div className="d-flex justify-content-center p-2">
+            <button
+              style={{ width: "44%", marginRight: "20px" }}
+              className="btn btn-outline-success d-inline-block"
+            >
+              Update
+            </button>
+            <button
+              style={{ width: "44%" }}
+              className="btn btn-warning d-inline-block"
+            >
+              Deliver
+            </button>
+          </div>
         </Card.Footer>
       </Card>
     </div>
