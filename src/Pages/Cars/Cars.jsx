@@ -3,35 +3,35 @@ import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Cars = ({ car }) => {
-  const { name, price, des, supplier, img, quantity } = car;
+  const { _id, name, price, des, supplier, img, quantity } = car;
   const navigate = useNavigate();
   const navigateToUpdate = () => {
-    navigate("/update");
+    navigate(`/update/${_id}`);
   };
   return (
-    <div className="col-12 my-3">
-      <Card>
-        <Card.Img variant="top" src={img} />
-        <Card.Body>
-          <Card.Title className="fw-bolder">{name}</Card.Title>
-          <Card.Text className="text-secondary">{des}</Card.Text>
-          <Card.Text className="text-secondary">Quantity: {quantity}</Card.Text>
-          <Card.Text className="text-secondary">
+    <div className="border rounded-3 my-3">
+      <div className="row">
+        <img src={img} className="col-4" alt="" />
+        <div className="col-8 p-3">
+          <h4 className="fw-bolder">{name}</h4>
+          <div className="text-secondary">{des}</div>
+          <div className="text-secondary">Quantity: {quantity}</div>
+          <div className="text-secondary">
             Supplier: <span className="fw-bold">{supplier}</span>
-          </Card.Text>
+          </div>
           <small className="text-muted">
             Starting at <span className="fw-bold">${price}</span>
           </small>
-        </Card.Body>
-        <Card.Footer className="p-2">
+        </div>
+        <div className="p-2">
           <button
-            onClick={navigateToUpdate}
-            className="btn btn-outline-success d-inline-block w-100"
+            onClick={() => navigateToUpdate(_id)}
+            className="btn btn-success d-inline-block w-100"
           >
             Update
           </button>
-        </Card.Footer>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const FullInventory = () => {
       <h2 className="fw-bold text-center">Inventory</h2>
       <div className="row w-75 mx-auto">
         {cars.map((car) => (
-          <Cars key={car.length} car={car}></Cars>
+          <Cars key={car._id} car={car}></Cars>
         ))}
       </div>
     </div>
