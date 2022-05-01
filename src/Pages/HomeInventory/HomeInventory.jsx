@@ -28,7 +28,7 @@ const HomeInventory = ({ car }) => {
             </button>
             <button
               style={{ width: "44%" }}
-              className="btn btn-outline-danger d-inline-block"
+              className="btn btn-warning d-inline-block"
             >
               Deliver
             </button>
