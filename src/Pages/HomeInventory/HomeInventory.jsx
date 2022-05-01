@@ -19,9 +19,20 @@ const HomeInventory = ({ car }) => {
           </small>
         </Card.Body>
         <Card.Footer>
-          <button className="btn btn-outline-success d-block w-100">
-            Update
-          </button>
+          <div className="d-flex justify-content-center">
+            <button
+              style={{ width: "44%", marginRight: "20px" }}
+              className="btn btn-outline-success d-inline-block"
+            >
+              Update
+            </button>
+            <button
+              style={{ width: "44%" }}
+              className="btn btn-outline-danger d-inline-block"
+            >
+              Deliver
+            </button>
+          </div>
         </Card.Footer>
       </Card>
     </div>
