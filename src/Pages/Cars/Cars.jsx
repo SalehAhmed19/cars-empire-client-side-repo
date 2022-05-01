@@ -8,16 +8,18 @@ const Cars = ({ car }) => {
       <Card>
         <Card.Img variant="top" src={img} />
         <Card.Body>
-          <Card.Title className="fw-bold">{name}</Card.Title>
+          <Card.Title className="fw-bolder">{name}</Card.Title>
           <Card.Text className="text-secondary">{des}</Card.Text>
           <Card.Text className="text-secondary">Quantity: {quantity}</Card.Text>
-          <Card.Text className="text-secondary">Supplier: {supplier}</Card.Text>
+          <Card.Text className="text-secondary">
+            Supplier: <span className="fw-bold">{supplier}</span>
+          </Card.Text>
           <small className="text-muted">
             Starting at <span className="fw-bold">${price}</span>
           </small>
         </Card.Body>
-        <Card.Footer>
-          <button className="btn btn-outline-success d-block w-100">
+        <Card.Footer className="p-0">
+          <button className="btn btn-outline-success rounded-0 d-block w-100">
             Update
           </button>
         </Card.Footer>

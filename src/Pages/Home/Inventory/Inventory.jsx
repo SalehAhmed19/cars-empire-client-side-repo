@@ -6,7 +6,7 @@ import HomeInventory from "../../HomeInventory/HomeInventory";
 const Inventory = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("cars.json")
+    fetch("https://protected-lake-29761.herokuapp.com/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
