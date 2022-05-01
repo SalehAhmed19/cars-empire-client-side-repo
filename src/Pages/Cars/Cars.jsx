@@ -1,8 +1,13 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Cars = ({ car }) => {
   const { name, price, des, supplier, img, quantity } = car;
+  const navigate = useNavigate();
+  const navigateToUpdate = () => {
+    navigate("/update");
+  };
   return (
     <div className="col-12 my-3">
       <Card>
@@ -18,21 +23,13 @@ const Cars = ({ car }) => {
             Starting at <span className="fw-bold">${price}</span>
           </small>
         </Card.Body>
-        <Card.Footer className="p-0">
-          <div className="d-flex justify-content-center p-2">
-            <button
-              style={{ width: "44%", marginRight: "20px" }}
-              className="btn btn-outline-success d-inline-block"
-            >
-              Update
-            </button>
-            <button
-              style={{ width: "44%" }}
-              className="btn btn-warning d-inline-block"
-            >
-              Deliver
-            </button>
-          </div>
+        <Card.Footer className="p-2">
+          <button
+            onClick={navigateToUpdate}
+            className="btn btn-outline-success d-inline-block w-100"
+          >
+            Update
+          </button>
         </Card.Footer>
       </Card>
     </div>

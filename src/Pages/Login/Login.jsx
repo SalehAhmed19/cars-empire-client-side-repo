@@ -13,7 +13,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const toggleToRegister = () => {
-    navigate("/ragistration");
+    navigate("/registration");
   };
   const handleSignin = (event) => {
     event.preventDefault();
