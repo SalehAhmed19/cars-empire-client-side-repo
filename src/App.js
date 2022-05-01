@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/inventory" element={<FullInventory />}></Route>
         <Route
-          path="/update"
+          path="/update/:_id"
           element={
             <RequireAuth>
               <Update />

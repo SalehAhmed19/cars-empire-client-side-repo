@@ -3,10 +3,10 @@ import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const HomeInventory = ({ car }) => {
-  const { name, img, des, price, quantity, supplier } = car;
+  const { _id, name, img, des, price, quantity, supplier } = car;
   const navigate = useNavigate();
-  const navigateToUpdate = () => {
-    navigate("/update");
+  const navigateToUpdate = (_id) => {
+    navigate(`/update/${_id}`);
   };
   return (
     <div className="col-md-4 col-12 my-3">
@@ -25,7 +25,7 @@ const HomeInventory = ({ car }) => {
         </Card.Body>
         <Card.Footer className="p-2">
           <button
-            onClick={navigateToUpdate}
+            onClick={() => navigateToUpdate(_id)}
             className="btn btn-outline-success d-inline-block w-100"
           >
             Update
