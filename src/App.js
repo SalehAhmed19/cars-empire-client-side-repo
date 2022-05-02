@@ -7,6 +7,7 @@ import Registration from "./Pages/Registration/Registration";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import Update from "./Pages/Update/Update";
 import Header from "./Shared/Header/Header";
+import Footer from "./Shared/Footer/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

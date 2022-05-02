@@ -22,8 +22,12 @@ const Inventory = () => {
           <HomeInventory key={car._id} car={car}></HomeInventory>
         ))}
       </div>
-      <Button onClick={navigateToInventory} variant="success d-block mx-auto">
-        See More in Inventory
+      <Button
+        className="my-5"
+        onClick={navigateToInventory}
+        variant="warning d-block mx-auto"
+      >
+        Manage Inventory
       </Button>
     </div>
   );

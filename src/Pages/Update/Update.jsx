@@ -15,9 +15,16 @@ const Update = () => {
   return (
     <div className="container m-5">
       <Card>
-        <Card.Img variant="top" src={car.img} />
+        <Card.Img
+          className="w-50 d-block mx-auto"
+          variant="top"
+          src={car.img}
+        />
         <Card.Body>
           <Card.Title className="fw-bold">{car.name}</Card.Title>
+          <Card.Text className="text-secondary fw-bold">
+            Product ID: {car._id}
+          </Card.Text>
           <Card.Text className="text-secondary">{car.des}</Card.Text>
           <Card.Text className="text-secondary">
             Quantity: {car.quantity}
