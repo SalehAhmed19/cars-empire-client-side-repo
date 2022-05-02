@@ -6,7 +6,7 @@ const useCars = () => {
     fetch("https://protected-lake-29761.herokuapp.com/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
-  }, []);
+  }, [cars]);
   return [cars, setCars];
 };
 

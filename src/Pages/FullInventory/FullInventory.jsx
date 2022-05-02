@@ -28,8 +28,22 @@ const FullInventory = () => {
     const supplier = event.target.supplier.value;
     const price = event.target.price.value;
     const img = event.target.img.value;
-
-    console.log(name, des, quantity, supplier, price, img);
+    const car = {
+      name: name,
+      price: price,
+      img: img,
+      des: des,
+      supplier: supplier,
+      quantity: quantity,
+    };
+    fetch("https://protected-lake-29761.herokuapp.com/cars", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(car),
+    })
+      .then((res) => res.json())
+      .then((data) => {});
+    alert("Uploaded");
     event.target.reset();
   };
   return (
@@ -92,9 +106,8 @@ const FullInventory = () => {
         </div>
       </div>
       <div className="container">
-        <ul className="list-unstyled" /* className="row w-75 mx-auto" */>
+        <ul className="list-unstyled">
           {cars.map((car) => (
-            // <Cars key={car._id} car={car} handleDelete={handleDelete}></Cars>
             <li key={car._id}>
               <div className="row border m-3 p-3 rounded-3">
                 <div className="col-md-4 col-12">
