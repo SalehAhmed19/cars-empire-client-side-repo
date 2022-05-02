@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import useCars from "../../Hooks/useCars";
 import { PlusCircleIcon } from "@heroicons/react/solid";
+import { toast } from "react-toastify";
 
 const FullInventory = () => {
   const [cars, setCars] = useCars();
@@ -43,7 +44,7 @@ const FullInventory = () => {
     })
       .then((res) => res.json())
       .then((data) => {});
-    alert("Uploaded");
+    toast("Product added!");
     event.target.reset();
   };
   return (

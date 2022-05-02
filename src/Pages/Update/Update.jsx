@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import UpdateCar from "../UpdateCar/UpdateCar";
 
 const Update = () => {
   const { _id } = useParams();
@@ -12,6 +11,7 @@ const Update = () => {
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, []);
+
   return (
     <div className="container m-5">
       <Card>

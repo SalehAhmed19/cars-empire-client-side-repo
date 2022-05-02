@@ -8,6 +8,8 @@ import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import Update from "./Pages/Update/Update";
 import Header from "./Shared/Header/Header";
 import Footer from "./Shared/Footer/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
       </Routes>
+      <ToastContainer />
       <Footer />
     </div>
   );
