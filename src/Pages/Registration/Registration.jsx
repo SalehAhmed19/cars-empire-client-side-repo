@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
@@ -96,6 +97,7 @@ const Registration = () => {
           </Button>
         </p>
       </div>
+      <SocialLogin />
     </div>
   );
 };

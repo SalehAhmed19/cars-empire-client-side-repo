@@ -7,6 +7,7 @@ import {
   useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
@@ -70,7 +71,7 @@ const Login = () => {
           <Button className="w-100 d-block h-2" variant="success" type="submit">
             Login
           </Button>
-          <p className="text-center">
+          <p className="text-center mt-3">
             Forgot Password?{" "}
             <span>
               <button
@@ -82,7 +83,7 @@ const Login = () => {
             </span>
           </p>
         </Form>
-        <p className="text-center pt-3">
+        <p className="text-center">
           New to Cars-Empire?{" "}
           <Button
             onClick={toggleToRegister}
@@ -94,6 +95,7 @@ const Login = () => {
           <p className="text-danger text-center">{error?.message}</p>
         </p>
       </div>
+      <SocialLogin />
     </div>
   );
 };
