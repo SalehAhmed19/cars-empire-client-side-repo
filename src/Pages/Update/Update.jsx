@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Update = () => {
   const { _id } = useParams();
@@ -13,7 +14,6 @@ const Update = () => {
   }, []);
   const handleQuantity = () => {
     let { quantity, name, price, des, supplier, img } = car;
-    console.log(quantity, name);
     if (quantity > 0) {
       quantity = quantity - 1;
       const updateQuantity = {
@@ -37,6 +37,43 @@ const Update = () => {
             .then((res) => res.json())
             .then((data) => {
               setCar(data);
+            });
+        });
+    }
+  };
+  const handleRestock = (event) => {
+    let { quantity, name, price, des, supplier, img } = car;
+    event.preventDefault();
+    const restockQuantity = event.target.restock.value;
+    console.log(restockQuantity);
+    if (!restockQuantity || restockQuantity < 0) {
+      toast("Please enter a valid number");
+    } else {
+      quantity = parseInt(quantity) + parseInt(restockQuantity);
+      const updateQuantity = {
+        quantity: quantity,
+        name: name,
+        price: price,
+        des: des,
+        supplier: supplier,
+        img: img,
+      };
+      const url = `https://protected-lake-29761.herokuapp.com/cars/${_id}`;
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateQuantity),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+              setCar(data);
+              event.target.reset();
             });
         });
     }
@@ -74,18 +111,26 @@ const Update = () => {
           </button>
         </Card.Footer>
       </Card>
-      <div
+      <form
+        onSubmit={handleRestock}
         style={{ backgroundColor: "#e5e5e5" }}
         className="mt-5 p-3 rounded-3 w-75 mx-auto"
       >
         <h5>Restock Product</h5>
-        <input
-          style={{ height: "36px" }}
-          className="d-inline-block border-0 w-50"
-          type="number"
-        />
-        <input type="submit" className="btn btn-success w-50" />
-      </div>
+        <div className="d-flex justify-content-center align-items-center">
+          <input
+            name="restock"
+            style={{ height: "36px" }}
+            className="d-inline-block border-0 w-50"
+            type="number"
+          />
+          <input
+            type="submit"
+            value="Restock"
+            className="btn btn-success w-50"
+          />
+        </div>
+      </form>
     </div>
   );
 };

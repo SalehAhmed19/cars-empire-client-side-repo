@@ -25,7 +25,7 @@ const FullInventory = () => {
     event.preventDefault();
     const name = event.target.name.value;
     const des = event.target.des.value;
-    const quantity = event.target.quantity.value;
+    const quantity = parseInt(event.target.quantity.value);
     const supplier = event.target.supplier.value;
     const price = event.target.price.value;
     const img = event.target.img.value;
