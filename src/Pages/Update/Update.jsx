@@ -103,12 +103,21 @@ const Update = () => {
           </small>
         </Card.Body>
         <Card.Footer className="p-2">
-          <button
-            onClick={handleQuantity}
-            className="btn btn-warning d-inline-block w-100"
-          >
-            Delivered
-          </button>
+          {!car.quantity ? (
+            <button
+              onClick={handleQuantity}
+              className="btn btn-Danger d-inline-block w-100 disabled"
+            >
+              Stock Out
+            </button>
+          ) : (
+            <button
+              onClick={handleQuantity}
+              className="btn btn-warning d-inline-block w-100"
+            >
+              Delivered
+            </button>
+          )}
         </Card.Footer>
       </Card>
       <form

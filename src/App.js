@@ -10,6 +10,7 @@ import Header from "./Shared/Header/Header";
 import Footer from "./Shared/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AddNewItem from "./Pages/AddNewItem/AddNewItem";
 
 function App() {
   return (
@@ -30,6 +31,14 @@ function App() {
           element={
             <RequireAuth>
               <Update />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/add-item"
+          element={
+            <RequireAuth>
+              <AddNewItem />
             </RequireAuth>
           }
         ></Route>

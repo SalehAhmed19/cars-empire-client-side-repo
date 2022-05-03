@@ -41,7 +41,7 @@ const Header = () => {
             <Nav>
               {user ? (
                 <Button
-                  variant="outline-success"
+                  variant="transparent"
                   className="text-secondary text-light"
                   onClick={handleSignout}
                 >
@@ -52,9 +52,6 @@ const Header = () => {
                   Login
                 </Nav.Link>
               )}
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

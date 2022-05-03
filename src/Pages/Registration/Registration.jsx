@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [agree, setAgree] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
@@ -19,7 +21,10 @@ const Registration = () => {
     console.log(email, password);
     setEmail(email);
     setPassword(password);
-    createUserWithEmailAndPassword(email, password);
+    if (agree) {
+      createUserWithEmailAndPassword(email, password);
+      toast("Verification email sent!");
+    }
   };
   if (loading) {
     return (
@@ -65,11 +70,20 @@ const Registration = () => {
             <Form.Check
               type="checkbox"
               label="Accept Terms and Conditions of Cars-Empire"
+              name="terms"
+              id="terms"
+              onClick={() => setAgree(!agree)}
             />
           </Form.Group>
-          <Button className="w-100 d-block h-2" variant="success" type="submit">
-            Login
+          <Button
+            disabled={!agree}
+            className="w-100 d-block h-2"
+            variant="success"
+            type="submit"
+          >
+            Register
           </Button>
+          <p className="text-danger text-center">{error?.message}</p>
         </Form>
         <p className="text-center pt-3">
           Already have an account?{" "}
@@ -80,7 +94,6 @@ const Registration = () => {
           >
             Please Login
           </Button>
-          <p className="text-danger text-center">{error?.message}</p>
         </p>
       </div>
     </div>
