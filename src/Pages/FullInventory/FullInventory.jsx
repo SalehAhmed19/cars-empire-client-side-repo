@@ -50,7 +50,7 @@ const FullInventory = () => {
   return (
     <div className="mt-3">
       <h2 className="fw-bold text-center">Inventory</h2>
-      <div className="w-50 mx-auto p-3 bg-light border rounded-3">
+      <div className="w-75 mx-auto p-3 bg-light border rounded-3">
         <h5>Add Item</h5>
         <div className="d-flex flex-column">
           <form onSubmit={handleSubmit}>
@@ -98,7 +98,7 @@ const FullInventory = () => {
             />
             <button
               type="submit"
-              className="btn btn-success w-25 d-block mx-auto"
+              className="btn btn-success w-100 d-block mx-auto"
             >
               Add Item
               <PlusCircleIcon className="ms-3" style={{ width: "25px" }} />
