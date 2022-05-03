@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSendPasswordResetEmail,
+} from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const emailRef = useRef("");
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
@@ -26,6 +32,15 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("Please enter your email");
+    }
+  };
   return (
     <div>
       <h2 className="text-success fw-bold text-center">Login</h2>
@@ -33,7 +48,12 @@ const Login = () => {
         <Form onSubmit={handleSignin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="email" type="email" placeholder="Enter email" />
+            <Form.Control
+              ref={emailRef}
+              name="email"
+              type="email"
+              placeholder="Enter email"
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -50,6 +70,17 @@ const Login = () => {
           <Button className="w-100 d-block h-2" variant="success" type="submit">
             Login
           </Button>
+          <p className="text-center">
+            Forgot Password?{" "}
+            <span>
+              <button
+                onClick={resetPassword}
+                className="btn btn-transparent text-success"
+              >
+                Reset Password
+              </button>
+            </span>
+          </p>
         </Form>
         <p className="text-center pt-3">
           New to Cars-Empire?{" "}
