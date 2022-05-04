@@ -41,7 +41,7 @@ const MyItems = () => {
         <ul>
           {myItems.map((item) => (
             <li key={item._id} item={item} className="list-unstyled">
-              <div className="row border m-3 p-3 rounded-3">
+              <div className="row border m-3 p-3 rounded-3 bg-white">
                 <div className="col-md-4 col-12">
                   <img style={{ width: "300px" }} src={item.img} alt="" />
                 </div>

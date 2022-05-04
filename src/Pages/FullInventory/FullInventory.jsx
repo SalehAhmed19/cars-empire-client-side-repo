@@ -25,7 +25,8 @@ const FullInventory = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          if (data.deletedCount > 0) {
+          console.log(data);
+          if (data.deletedCount == 0) {
             const remaining = myItems.filter((item) => item._id !== _id);
             setMyItems(remaining);
           }
