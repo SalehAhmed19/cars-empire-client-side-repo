@@ -1,8 +1,11 @@
 import React from "react";
 import { PlusCircleIcon } from "@heroicons/react/solid";
 import { toast } from "react-toastify";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const AddNewItem = () => {
+  const [user] = useAuthState(auth);
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -11,6 +14,7 @@ const AddNewItem = () => {
     const supplier = event.target.supplier.value;
     const price = event.target.price.value;
     const img = event.target.img.value;
+    const email = event.target.email.value;
     const car = {
       name: name,
       price: price,
@@ -18,6 +22,7 @@ const AddNewItem = () => {
       des: des,
       supplier: supplier,
       quantity: quantity,
+      email: email,
     };
     fetch("https://protected-lake-29761.herokuapp.com/cars", {
       method: "POST",
@@ -28,6 +33,13 @@ const AddNewItem = () => {
       .then((data) => {});
     toast("Product added!");
     event.target.reset();
+    fetch("https://protected-lake-29761.herokuapp.com/my-items", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(car),
+    })
+      .then((res) => res.json())
+      .then((data) => {});
   };
   return (
     <div style={{ height: "65vh" }} className="my-5">
@@ -76,6 +88,14 @@ const AddNewItem = () => {
               type="text"
               name="img"
               placeholder="imgURL"
+            />
+            <input
+              className="border-0 mb-2 rounded-3 d-block"
+              style={{ height: "35px", width: "100%" }}
+              type="email"
+              name="email"
+              value={user.email}
+              readOnly
             />
             <button
               type="submit"

@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import axios from "axios";
 
 const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
@@ -22,13 +23,17 @@ const Login = () => {
   const toggleToRegister = () => {
     navigate("/registration");
   };
-  const handleSignin = (event) => {
+  const handleSignin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
     setEmail(email);
     setPassword(password);
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post(
+      "https://protected-lake-29761.herokuapp.com/login",
+      { email }
+    );
   };
   if (user) {
     navigate(from, { replace: true });
@@ -92,8 +97,8 @@ const Login = () => {
           >
             Please Register
           </Button>
-          <p className="text-danger text-center">{error?.message}</p>
         </p>
+        <p className="text-danger text-center">{error?.message}</p>
       </div>
       <SocialLogin />
     </div>

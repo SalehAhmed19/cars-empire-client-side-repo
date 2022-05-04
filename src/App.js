@@ -11,6 +11,7 @@ import Footer from "./Shared/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddNewItem from "./Pages/AddNewItem/AddNewItem";
+import MyItems from "./Pages/MyItems/MyItems";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/my-items" element={<MyItems />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
       </Routes>

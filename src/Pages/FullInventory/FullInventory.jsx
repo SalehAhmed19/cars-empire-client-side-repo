@@ -18,6 +18,16 @@ const FullInventory = () => {
             setCars(remaining);
           }
         });
+      fetch(`https://protected-lake-29761.herokuapp.com/my-items/${_id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = cars.filter((car) => car._id !== _id);
+            setCars(remaining);
+          }
+        });
     }
   };
   const navigateToAddItem = () => {
