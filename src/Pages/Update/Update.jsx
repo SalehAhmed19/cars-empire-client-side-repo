@@ -32,7 +32,6 @@ const Update = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           fetch(url)
             .then((res) => res.json())
             .then((data) => {
@@ -45,7 +44,6 @@ const Update = () => {
     let { quantity, name, price, des, supplier, img } = car;
     event.preventDefault();
     const restockQuantity = event.target.restock.value;
-    console.log(restockQuantity);
     if (!restockQuantity || restockQuantity < 0) {
       toast("Please enter a valid number");
     } else {
@@ -68,7 +66,6 @@ const Update = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           fetch(url)
             .then((res) => res.json())
             .then((data) => {

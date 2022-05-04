@@ -26,9 +26,9 @@ const FullInventory = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          if (data.deletedCount == 0) {
-            const remaining = myItems.filter((item) => item._id !== _id);
-            setMyItems(remaining);
+          if (data.deletedCount > 0) {
+            const remainingItem = myItems.filter((item) => item._id !== _id);
+            setMyItems(remainingItem);
           }
         });
     }
