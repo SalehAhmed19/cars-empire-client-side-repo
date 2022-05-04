@@ -3,24 +3,15 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import useCars from "../../Hooks/useCars";
+import useMyItems from "../../Hooks/useMyItems";
 
 const MyItems = () => {
   const [cars, setCars] = useCars();
   const [user] = useAuthState(auth);
-  const [myItems, setMyItems] = useState([]);
-  useEffect(() => {
-    const getMyItem = async () => {
-      const email = user?.email;
-      const url = `https://protected-lake-29761.herokuapp.com/my-items?email=${email}`;
-      const { data } = await axios.get(url);
-      setMyItems(data);
-    };
-    getMyItem();
-  }, [user]);
-
+  const [myItems, setMyItems] = useMyItems();
   const handleDelete = (_id) => {
-    const procced = window.confirm("Are you sure you want to delete it?");
-    if (procced) {
+    const proceed = window.confirm("Are you sure you want to delete it?");
+    if (proceed) {
       fetch(`https://protected-lake-29761.herokuapp.com/my-items/${_id}`, {
         method: "DELETE",
       })
@@ -31,12 +22,22 @@ const MyItems = () => {
             setMyItems(remaining);
           }
         });
+      fetch(`https://protected-lake-29761.herokuapp.com/cars/${_id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = cars.filter((car) => car._id !== _id);
+            setCars(remaining);
+          }
+        });
     }
   };
   return (
     <div style={{ height: "75vh" }}>
-      <h2>My Items</h2>
-      <div>
+      <h2 className="fw-bold text-center text-success">My Items</h2>
+      <div className="border rounded-3 m-3 p-3 bg-light">
         <ul>
           {myItems.map((item) => (
             <li key={item._id} item={item} className="list-unstyled">

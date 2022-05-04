@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import useCars from "../../Hooks/useCars";
 import { PlusCircleIcon } from "@heroicons/react/solid";
+import useMyItems from "../../Hooks/useMyItems";
 
 const FullInventory = () => {
   const [cars, setCars] = useCars();
+  const [myItems, setMyItems] = useMyItems();
   const navigate = useNavigate();
   const handleDelete = (_id) => {
     const procced = window.confirm("Are you sure you want to delete it?");
@@ -24,8 +26,8 @@ const FullInventory = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            const remaining = cars.filter((car) => car._id !== _id);
-            setCars(remaining);
+            const remaining = myItems.filter((item) => item._id !== _id);
+            setMyItems(remaining);
           }
         });
     }
