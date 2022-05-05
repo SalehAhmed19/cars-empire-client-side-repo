@@ -27,7 +27,7 @@ const FullInventory = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            const remainingItem = myItems.filter((item) => item._id !== _id);
+            const remainingItem = myItems.filter((car) => car._id !== _id);
             setMyItems(remainingItem);
           }
         });

@@ -1,13 +1,7 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
-import useCars from "../../Hooks/useCars";
+import React from "react";
 import useMyItems from "../../Hooks/useMyItems";
 
 const MyItems = () => {
-  const [cars, setCars] = useCars();
-  const [user] = useAuthState(auth);
   const [myItems, setMyItems] = useMyItems();
   const handleDelete = (_id) => {
     const proceed = window.confirm("Are you sure you want to delete it?");
@@ -20,16 +14,6 @@ const MyItems = () => {
           if (data.deletedCount > 0) {
             const remainingItem = myItems.filter((item) => item._id !== _id);
             setMyItems(remainingItem);
-          }
-        });
-      fetch(`https://protected-lake-29761.herokuapp.com/cars/${_id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.deletedCount > 0) {
-            const remaining = cars.filter((car) => car._id !== _id);
-            setCars(remaining);
           }
         });
     }
