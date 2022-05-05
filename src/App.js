@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AddNewItem from "./Pages/AddNewItem/AddNewItem";
 import MyItems from "./Pages/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           }
         ></Route>
         <Route path="/my-items" element={<MyItems />}></Route>
+        <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
         <Route path="*" element={<NotFound />}></Route>

@@ -12,7 +12,7 @@ const Header = () => {
   };
   return (
     <nav>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
         <Container>
           <Navbar.Brand className="fw-bold" as={Link} to="/">
             Cars-Empire
@@ -22,6 +22,9 @@ const Header = () => {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/inventory">
                 Manage Inventory
+              </Nav.Link>
+              <Nav.Link as={Link} to="/blogs">
+                Blogs
               </Nav.Link>
               {user && (
                 <>
