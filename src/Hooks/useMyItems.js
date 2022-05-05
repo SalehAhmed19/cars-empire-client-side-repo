@@ -10,7 +10,11 @@ const useMyItems = () => {
     const getMyItem = async () => {
       const email = user?.email;
       const url = `https://protected-lake-29761.herokuapp.com/my-items?email=${email}`;
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(url, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
       setMyItems(data);
     };
     getMyItem();
