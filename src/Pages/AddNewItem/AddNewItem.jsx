@@ -15,6 +15,7 @@ const AddNewItem = () => {
     const price = event.target.price.value;
     const img = event.target.img.value;
     const email = event.target.email.value;
+    const sold = 0;
     const car = {
       name: name,
       price: price,
@@ -23,6 +24,7 @@ const AddNewItem = () => {
       supplier: supplier,
       quantity: quantity,
       email: email,
+      sold: sold,
     };
     fetch("https://protected-lake-29761.herokuapp.com/cars", {
       method: "POST",
@@ -33,13 +35,6 @@ const AddNewItem = () => {
       .then((data) => {});
     toast("Product added!");
     event.target.reset();
-    // fetch("https://protected-lake-29761.herokuapp.com/my-items", {
-    //   method: "POST",
-    //   headers: { "content-type": "application/json" },
-    //   body: JSON.stringify(car),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {});
   };
   return (
     <div style={{ height: "65vh" }} className="my-5">

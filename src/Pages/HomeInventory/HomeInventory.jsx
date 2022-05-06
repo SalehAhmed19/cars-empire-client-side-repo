@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const HomeInventory = ({ car }) => {
-  const { _id, name, img, des, price, quantity, supplier } = car;
+  const { _id, name, img, des, price, quantity, supplier, sold } = car;
   const navigate = useNavigate();
   const navigateToUpdate = (_id) => {
     navigate(`/update/${_id}`);
@@ -18,6 +18,7 @@ const HomeInventory = ({ car }) => {
             {des.slice(0, 100) + "..."}
           </Card.Text>
           <Card.Text className="text-secondary">Quantity: {quantity}</Card.Text>
+          <Card.Text className="text-secondary">Sold: {sold}</Card.Text>
           <Card.Text className="text-secondary">Supplier: {supplier}</Card.Text>
           <small className="text-muted">
             Starting at <span className="fw-bold">${price}</span>

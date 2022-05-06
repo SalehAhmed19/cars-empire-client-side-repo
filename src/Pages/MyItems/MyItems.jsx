@@ -3,6 +3,7 @@ import useMyItems from "../../Hooks/useMyItems";
 
 const MyItems = () => {
   const [myItems, setMyItems] = useMyItems();
+  console.log(myItems);
   const handleDelete = (_id) => {
     const proceed = window.confirm("Are you sure you want to delete it?");
     if (proceed) {
@@ -27,12 +28,18 @@ const MyItems = () => {
             <li key={item._id} item={item} className="list-unstyled">
               <div className="row border m-3 p-3 rounded-3 bg-white">
                 <div className="col-md-4 col-12">
-                  <img style={{ width: "300px" }} src={item.img} alt="" />
+                  <img
+                    style={{ width: "300px" }}
+                    className="img-fluid"
+                    src={item.img}
+                    alt=""
+                  />
                 </div>
                 <div className="col-md-8 col-12">
                   <h4 className="fw-bolder">{item.name}</h4>
                   <p className="text-secondary">{item.des}</p>
                   <p className="text-secondary">Quantity: {item.quantity}</p>
+                  <p className="text-secondary">Sold: {item.sold}</p>
                   <p className="text-secondary">
                     Supplier: <span className="fw-bold">{item.supplier}</span>
                   </p>

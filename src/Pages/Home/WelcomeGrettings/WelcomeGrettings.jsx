@@ -10,13 +10,11 @@ const WelcomeGrettings = () => {
           <img className="img" src={img} alt="" />
         </div>
         <div className="col-md-6 col-12 d-flex flex-column justify-content-center bg-warning p-3">
-          <h1 className="fw-bold">Welcome to Car Warehouse</h1>
-          <h5>Lorem ipsum dolor sit amet consectetur</h5>
+          <h1 className="fw-bold">Welcome to Car-Empire</h1>
+          <h5>Warehouse Management Service</h5>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi ab
-            ratione eum provident debitis distinctio et esse dignissimos, enim
-            quis, minus tempora. Illo architecto quo impedit, deserunt dicta
-            animi veritatis.
+            Car-Empire Warehouse management system website. The best products,
+            the best management application.
           </p>
         </div>
       </div>
