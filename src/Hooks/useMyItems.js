@@ -21,8 +21,10 @@ const useMyItems = () => {
         });
         setMyItems(data);
       } catch (error) {
-        signOut(auth);
-        navigate("/login");
+        if (error) {
+          signOut(auth);
+          navigate("/login");
+        }
       }
     };
     getMyItem();
