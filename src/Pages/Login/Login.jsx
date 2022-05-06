@@ -34,7 +34,7 @@ const Login = () => {
       "https://protected-lake-29761.herokuapp.com/login",
       { email }
     );
-    localStorage.setItem("accessToken", data);
+    localStorage.setItem("accessToken", data.accessToken);
   };
   if (user) {
     navigate(from, { replace: true });
