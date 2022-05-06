@@ -21,7 +21,7 @@ const useMyItems = () => {
         });
         setMyItems(data);
       } catch (error) {
-        if (error.response.status === 403 || error.response.status === 401) {
+        if (error.response.status === 403) {
           signOut(auth);
           navigate("/login");
         }
