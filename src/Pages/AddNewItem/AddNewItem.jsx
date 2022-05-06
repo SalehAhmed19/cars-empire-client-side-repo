@@ -33,13 +33,13 @@ const AddNewItem = () => {
       .then((data) => {});
     toast("Product added!");
     event.target.reset();
-    fetch("https://protected-lake-29761.herokuapp.com/my-items", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(car),
-    })
-      .then((res) => res.json())
-      .then((data) => {});
+    // fetch("https://protected-lake-29761.herokuapp.com/my-items", {
+    //   method: "POST",
+    //   headers: { "content-type": "application/json" },
+    //   body: JSON.stringify(car),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {});
   };
   return (
     <div style={{ height: "65vh" }} className="my-5">

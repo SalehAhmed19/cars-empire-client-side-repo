@@ -13,22 +13,24 @@ const Update = () => {
       .then((data) => setCar(data));
   }, []);
   const handleQuantity = () => {
-    let { quantity, name, price, des, supplier, img } = car;
+    let { quantity, name, price, des, supplier, img, sold } = car;
     if (quantity > 0) {
       quantity = quantity - 1;
-      const updateQuantity = {
+      sold = sold + 1;
+      const update = {
         quantity: quantity,
         name: name,
         price: price,
         des: des,
         supplier: supplier,
         img: img,
+        sold: sold,
       };
       const url = `https://protected-lake-29761.herokuapp.com/cars/${_id}`;
       fetch(url, {
         method: "PUT",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(updateQuantity),
+        body: JSON.stringify(update),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -41,7 +43,7 @@ const Update = () => {
     }
   };
   const handleRestock = (event) => {
-    let { quantity, name, price, des, supplier, img } = car;
+    let { quantity, name, price, des, supplier, img, sold } = car;
     event.preventDefault();
     const restockQuantity = event.target.restock.value;
     if (!restockQuantity || restockQuantity < 0) {
@@ -55,6 +57,7 @@ const Update = () => {
         des: des,
         supplier: supplier,
         img: img,
+        sold: sold,
       };
       const url = `https://protected-lake-29761.herokuapp.com/cars/${_id}`;
       fetch(url, {
@@ -92,6 +95,7 @@ const Update = () => {
           <Card.Text className="text-secondary">
             Quantity: {car.quantity}
           </Card.Text>
+          <Card.Text className="text-secondary">Sold: {car.sold}</Card.Text>
           <Card.Text className="text-secondary">
             Supplier: {car.supplier}
           </Card.Text>
