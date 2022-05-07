@@ -9,6 +9,8 @@ import {
 import { toast } from "react-toastify";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import axios from "axios";
+import useToken from "../../Hooks/useToken";
+import Loading from "../../Shared/Loading/Loading";
 
 const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
@@ -20,6 +22,7 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
+  const [token] = useToken(user);
   const toggleToRegister = () => {
     navigate("/registration");
   };
@@ -30,14 +33,11 @@ const Login = () => {
     setEmail(email);
     setPassword(password);
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post(
-      "https://protected-lake-29761.herokuapp.com/login",
-      { email }
-    );
-    console.log(data);
-    localStorage.setItem("accessToken", data.accessToken);
   };
-  if (user) {
+  if (loading) {
+    return <Loading />;
+  }
+  if (token) {
     navigate(from, { replace: true });
   }
   const resetPassword = async () => {
