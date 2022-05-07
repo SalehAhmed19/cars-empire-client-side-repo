@@ -1,6 +1,6 @@
 # Cars-Empire
 
-[Cars-Empire](https://cars-empire.web.app/).
+[Cars-Empire](https://cars-empire.web.app/)
 
 ## Available Scripts
 
