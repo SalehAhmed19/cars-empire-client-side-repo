@@ -9,7 +9,7 @@ const WelcomeGrettings = () => {
         <div className="col-md-6 col-12 d-flex justify-content-center align-items-center p-5">
           <img className="img" src={img} alt="" />
         </div>
-        <div className="col-md-6 col-12 d-flex flex-column justify-content-center bg-warning p-3">
+        <div className="col-md-6 col-12 d-flex flex-column justify-content-center bg-custom p-3">
           <h1 className="fw-bold">Welcome to Car-Empire</h1>
           <h5>Warehouse Management Service</h5>
           <p>
