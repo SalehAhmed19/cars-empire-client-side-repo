@@ -5,7 +5,7 @@ import img3 from "../../../img/slider-03.jpeg";
 
 const BestCars = () => {
   return (
-    <div className="container-fluid bg-light p-3 my-3">
+    <div className="container-fluid bg-light p-3 my-3 color">
       <h2 className="fw-bold text-center">Best Cars</h2>
       <div className="border rounded-3 mx-auto bg-light my-3 w-50">
         <div
