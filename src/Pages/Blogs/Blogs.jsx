@@ -113,7 +113,7 @@ const Blogs = () => {
       </div>
       <div className="bg-light p-3 border rounded-3 m-3">
         <h4 className="fw-bold text-center text-success">
-          When should you use nodejs and when should you use mongodb?
+          When should you use NodeJs and when should you use MongoDB?
         </h4>
         <div>
           <p>
