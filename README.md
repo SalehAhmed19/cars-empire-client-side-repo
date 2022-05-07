@@ -15,3 +15,7 @@
 ## Some of my projects
 
 [Tech-Land](https://techland-react.netlify.app)
+[Watch-Shop](https://watch-shop-react-app.netlify.app)
+[Nike-React](https://nike-react-s-a-dev.netlify.app)
+[Convention-Center](https://convention-center-s-a-dev.netlify.app)
+[Influencer-Gear](https://influencer-gear-saleh-ahmed.netlify.app)
