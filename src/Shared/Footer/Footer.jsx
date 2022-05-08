@@ -19,7 +19,8 @@ const Footer = () => {
         </div>
         <div>
           <p className="p-5 text-center m-0 text-light">
-            Developed by Saleh Ahmed Mahin &copy; All rights reserved
+            Developed by Saleh Ahmed Mahin &copy; Cars-Empire All rights
+            reserved
           </p>
         </div>
       </div>
