@@ -1,4 +1,6 @@
+import { TrashIcon } from "@heroicons/react/outline";
 import React from "react";
+import { Table } from "react-bootstrap";
 import useMyItems from "../../Hooks/useMyItems";
 
 const MyItems = () => {
@@ -22,43 +24,35 @@ const MyItems = () => {
   return (
     <div style={{ height: "75vh" }}>
       <h2 className="fw-bold text-center text-success">My Items</h2>
-      <div className="border rounded-3 m-3 p-3 bg-light">
-        <ul>
+      <div className="border rounded-3 p-3 bg-light container mx-auto">
+        <Table striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Model</th>
+              <th>Qty</th>
+              <th>Sold</th>
+            </tr>
+          </thead>
           {myItems.map((item) => (
-            <li key={item._id} item={item} className="list-unstyled">
-              <div className="row border m-3 p-3 rounded-3 bg-white">
-                <div className="col-md-4 col-12">
-                  <img
-                    style={{ width: "300px" }}
-                    className="img-fluid"
-                    src={item.img}
-                    alt=""
-                  />
-                </div>
-                <div className="col-md-8 col-12">
-                  <h4 className="fw-bolder">{item.name}</h4>
-                  <p className="text-secondary">{item.des}</p>
-                  <p className="text-secondary">Quantity: {item.quantity}</p>
-                  <p className="text-secondary">Sold: {item.sold}</p>
-                  <p className="text-secondary">
-                    Supplier: <span className="fw-bold">{item.supplier}</span>
-                  </p>
-                  <small className="text-muted">
-                    Starting at <span className="fw-bold">${item.price}</span>
-                  </small>
-                </div>
-                <div className="p-2 mx-auto d-flex justify-content-center">
+            <tbody key={item._id} item={item}>
+              <tr>
+                <td>{item._id.slice(0, 7) + "..."}</td>
+                <td>{item.name.slice(0, 7) + ".."}</td>
+                <td>{item.quantity}</td>
+                <td>{item.sold}</td>
+                <td className="text-center">
                   <button
+                    className="btn btn-outline-danger"
                     onClick={() => handleDelete(item._id)}
-                    className="btn btn-outline-danger d-inline-block w-50 ms-2"
                   >
-                    Delete
+                    <TrashIcon style={{ height: "22px" }} />
                   </button>
-                </div>
-              </div>
-            </li>
+                </td>
+              </tr>
+            </tbody>
           ))}
-        </ul>
+        </Table>
       </div>
     </div>
   );
