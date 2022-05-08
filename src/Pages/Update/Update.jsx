@@ -134,11 +134,7 @@ const Update = () => {
             className="d-inline-block border-0 w-50"
             type="number"
           />
-          <input
-            type="submit"
-            value="Restock"
-            className="btn btn-success w-50"
-          />
+          <input type="submit" value="Restock" className="btn btn-dark w-50" />
         </div>
       </form>
     </div>
