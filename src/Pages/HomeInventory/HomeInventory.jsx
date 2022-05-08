@@ -9,7 +9,7 @@ const HomeInventory = ({ car }) => {
     navigate(`/update/${_id}`);
   };
   return (
-    <div className="col-md-4 col-12 my-3">
+    <div className="col-lg-4 col-md-6 col-12 my-3">
       <Card>
         <Card.Img variant="top" src={img} />
         <Card.Body>

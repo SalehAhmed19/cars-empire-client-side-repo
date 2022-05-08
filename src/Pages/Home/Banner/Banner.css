@@ -4,6 +4,7 @@
 .bg-img{
     background-image: url('../../../img/car-1.jpg');
     background-size: cover;
+    height: 60vh;
 }
 .font{
     font-family: 'Righteous', cursive;
@@ -13,4 +14,20 @@
 }
 .text{
     font-size: 2.8rem;
+}
+@media only screen and (max-width:576px){
+    .bg-img{
+        height: auto;
+    }
+    .font{
+        font-size: 2rem;
+    }
+    .font-2{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:577px) and (max-width:992px){
+    .bg-img{
+        height: 30vh;
+    }
 }

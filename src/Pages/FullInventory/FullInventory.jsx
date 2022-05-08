@@ -45,8 +45,13 @@ const FullInventory = () => {
           {cars.map((car) => (
             <li key={car._id}>
               <div className="row border m-3 p-3 rounded-3">
-                <div className="col-md-4 col-12">
-                  <img style={{ width: "300px" }} src={car.img} alt="" />
+                <div className="col-lg-4 col-12">
+                  <img
+                    className="d-block mx-auto"
+                    style={{ width: "300px" }}
+                    src={car.img}
+                    alt=""
+                  />
                 </div>
                 <div className="col-md-8 col-12">
                   <h4 className="fw-bolder">{car.name}</h4>
