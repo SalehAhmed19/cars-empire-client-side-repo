@@ -2,6 +2,10 @@
 
 [Cars-Empire Live Website Link](https://cars-empire.web.app/)
 
+### Description
+
+This is a warehouse management website. This website usually used for stock, delivery and overall product management.
+
 ## Something to notice about this Website
 
 - This is a warehouse management website. In this website you'll be manage products, delivery, stocks etc.
@@ -19,3 +23,27 @@
 - [Nike-React](https://nike-react-s-a-dev.netlify.app)
 - [Convention-Center](https://convention-center-s-a-dev.netlify.app)
 - [Influencer-Gear](https://influencer-gear-saleh-ahmed.netlify.app)
+
+## Technology and Library
+
+### Frontend:
+
+- ReactJs
+- Bootstrap
+- React Bootstrap
+- React Router DOM
+- React Toastify
+- Firebase
+- React Firebase Hooks
+- Axios
+- Hero Icons
+
+### Backend:
+
+- NodeJs
+- ExpressJs
+- Cors
+- Dot Env
+- Jsonwebtoken (JWT)
+- Nodemon
+- MongoBD (Database)
