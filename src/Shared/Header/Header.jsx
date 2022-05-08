@@ -39,6 +39,11 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav>
+              {!user && (
+                <Nav.Link as={Link} className="font-2" to="/registration">
+                  Register
+                </Nav.Link>
+              )}
               <Nav.Link>{user?.displayName}</Nav.Link>
               {user ? (
                 <Button
