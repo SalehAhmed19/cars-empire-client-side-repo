@@ -50,11 +50,16 @@ const Registration = () => {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter your name" />
+            <Form.Control type="text" placeholder="Enter your name" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="email" type="email" placeholder="Enter email" />
+            <Form.Control
+              name="email"
+              type="email"
+              placeholder="Enter email"
+              required
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -65,6 +70,7 @@ const Registration = () => {
               name="password"
               type="password"
               placeholder="Password"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">

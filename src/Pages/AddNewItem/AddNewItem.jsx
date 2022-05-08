@@ -48,6 +48,7 @@ const AddNewItem = () => {
               type="text"
               name="name"
               placeholder="Enter the name"
+              required
             />
             <input
               className="border-0 mb-2 rounded-3 d-block"
@@ -55,6 +56,7 @@ const AddNewItem = () => {
               type="text"
               name="des"
               placeholder="Description"
+              required
             />
             <input
               className="border-0 mb-2 rounded-3 d-block"
@@ -62,6 +64,7 @@ const AddNewItem = () => {
               type="number"
               name="quantity"
               placeholder="Quantity"
+              required
             />
             <input
               className="border-0 mb-2 rounded-3 d-block"
@@ -69,6 +72,7 @@ const AddNewItem = () => {
               type="text"
               name="supplier"
               placeholder="Supplier"
+              required
             />
             <input
               className="border-0 mb-2 rounded-3 d-block"
@@ -76,6 +80,7 @@ const AddNewItem = () => {
               type="number"
               name="price"
               placeholder="Price"
+              required
             />
             <input
               className="border-0 mb-2 rounded-3 d-block"
