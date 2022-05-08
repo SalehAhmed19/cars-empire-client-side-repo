@@ -12,7 +12,7 @@ const SocialLogin = () => {
   const location = useLocation();
   const [token] = useToken(user);
   const email = user?.email;
-  console.log(email);
+  // console.log(email);
   const from = location.state?.from?.pathname || "/";
   const handleGoogleSignIn = async () => {
     await signInWithGoogle();
