@@ -25,7 +25,7 @@ const Inventory = () => {
       <Button
         className="my-5"
         onClick={navigateToInventory}
-        variant="warning d-block mx-auto"
+        variant="dark d-block mx-auto"
       >
         Manage Inventory
       </Button>

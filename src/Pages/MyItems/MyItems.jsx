@@ -23,7 +23,7 @@ const MyItems = () => {
   };
   return (
     <div style={{ height: "75vh" }}>
-      <h2 className="fw-bold text-center text-success">My Items</h2>
+      <h2 className="fw-bold text-center py-3">My Items</h2>
       <div className="border rounded-3 p-3 bg-light container mx-auto">
         <Table striped bordered hover responsive>
           <thead>

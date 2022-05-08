@@ -27,7 +27,7 @@ const HomeInventory = ({ car }) => {
         <Card.Footer className="p-2">
           <button
             onClick={() => navigateToUpdate(_id)}
-            className="btn btn-outline-success d-inline-block w-100"
+            className="btn btn-outline-dark d-inline-block w-100"
           >
             Update
           </button>

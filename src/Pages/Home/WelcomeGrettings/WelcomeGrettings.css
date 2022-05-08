@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 .img{
     width: 300px;
 }
 .bg-custom{
-    background-color: antiquewhite;
+    background-image: url('../../../img/background.jpg');
+    background-size: cover;
 }
 .color{
     background-color: #ffffe9;
+}
+.font-3{
+    font-family: 'Raleway', sans-serif;
 }

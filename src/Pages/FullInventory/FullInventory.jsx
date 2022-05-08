@@ -70,7 +70,7 @@ const FullInventory = () => {
                     onClick={() => {
                       navigate(`/update/${car._id}`);
                     }}
-                    className="btn btn-success d-inline-block w-25"
+                    className="btn btn-dark d-inline-block w-25"
                   >
                     Update
                   </button>
@@ -89,7 +89,7 @@ const FullInventory = () => {
       <div className="my-5">
         <button
           onClick={navigateToAddItem}
-          className="btn btn-success d-block mx-auto"
+          className="btn btn-outline-dark d-block mx-auto"
         >
           Add New Item <PlusCircleIcon style={{ width: "25px" }} />
         </button>

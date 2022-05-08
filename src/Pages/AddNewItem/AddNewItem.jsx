@@ -37,8 +37,8 @@ const AddNewItem = () => {
     event.target.reset();
   };
   return (
-    <div style={{ height: "65vh" }} className="my-5">
-      <h2 className="text-center fw-bold text-success">Add Item</h2>
+    <div style={{ height: "65vh" }} className="my-3">
+      <h2 className="text-center fw-bold">Add Item</h2>
       <div className="w-75 mx-auto p-3 bg-light border rounded-3">
         <div className="d-flex flex-column">
           <form onSubmit={handleSubmit}>
@@ -94,7 +94,7 @@ const AddNewItem = () => {
             />
             <button
               type="submit"
-              className="btn btn-success w-100 d-block mx-auto"
+              className="btn btn-dark w-100 d-block mx-auto"
             >
               Add Item
               <PlusCircleIcon className="ms-3" style={{ width: "25px" }} />
