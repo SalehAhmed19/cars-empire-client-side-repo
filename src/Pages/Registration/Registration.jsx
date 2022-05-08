@@ -19,7 +19,7 @@ const Registration = () => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     setEmail(email);
     setPassword(password);
     if (agree) {

@@ -5,7 +5,7 @@ import useMyItems from "../../Hooks/useMyItems";
 
 const MyItems = () => {
   const [myItems, setMyItems] = useMyItems();
-  console.log(myItems);
+  // console.log(myItems);
   const handleDelete = (_id) => {
     const proceed = window.confirm("Are you sure you want to delete it?");
     if (proceed) {

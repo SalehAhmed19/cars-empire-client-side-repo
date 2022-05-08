@@ -15,7 +15,7 @@ const FullInventory = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           if (data.deletedCount > 0) {
             const remaining = cars.filter((car) => car._id !== _id);
             setCars(remaining);
@@ -52,6 +52,7 @@ const FullInventory = () => {
                   <h4 className="fw-bolder">{car.name}</h4>
                   <p className="text-secondary">{car.des}</p>
                   <p className="text-secondary">Quantity: {car.quantity}</p>
+                  <p className="text-secondary">Sold: {car.sold}</p>
                   <p className="text-secondary">
                     Supplier: <span className="fw-bold">{car.supplier}</span>
                   </p>
