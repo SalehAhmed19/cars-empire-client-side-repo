@@ -1,10 +1,15 @@
 import React from "react";
-import img from "../../../img/car-1.jpg";
+import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div>
-      <img className="w-100" src={img} alt="" />
+    <div style={{ height: "60vh" }} className="bg-img">
+      <div className="py-5">
+        <h1 className="text-white font text-center text">Cars Empire</h1>
+        <h4 className="text-white text-center font-2">
+          Best Cars inventory management website
+        </h4>
+      </div>
     </div>
   );
 };
